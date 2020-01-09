@@ -1,0 +1,48 @@
+<% include ./header/head %>
+<link rel='stylesheet' href='/stylesheets/indexstyles.css'>
+</head>
+  <body>
+    <% include ./header/navbar %>
+    <% include ./card-views/cards %>
+  </body>
+  <script>
+    $(document).ready(() => {
+      $(window).click((e) => {
+        const el = e.target;
+        const $el = $(e.target);
+        
+        if ($el.hasClass('card')) {
+          $el.toggleClass('flip');
+        } else if ($el.parents().hasClass('card')) {
+          $el.parents('.card').toggleClass('flip');
+        }
+
+        if (el.id === "like") {
+          $el.toggleClass('blue');
+        }
+
+        if (el.id === "favorite") {
+          if ($el.html() === "favorite_border") {
+            $el.html('favorite').toggleClass('red');
+          } else {
+            $el.html('favorite_border').toggleClass('red');
+          }
+        }
+
+        if ($el.hasClass('card-description') && (!$el.hasClass('body-col-right') && !$el.parents().hasClass('body-col-right'))) {
+          $el.addClass('modal').children('.modal-button, .modal-content').removeClass('hidden');
+          $('.card-icons').addClass('grow-icons');
+        } else if ($el.parents().hasClass('card-description') && (!$el.hasClass('body-col-right') && !$el.parents().hasClass('body-col-right'))) {
+          $el.parents('.card-description').addClass('modal').children('.modal-button, .modal-content').removeClass('hidden');
+          $('.card-icons').addClass('grow-icons');
+        }
+
+        if ($el.hasClass('modal-button')) {
+          $el.parents('.card-description').removeClass('modal').children('.modal-button, .modal-content').addClass('hidden');
+          $('.card-icons').removeClass('grow-icons');
+        }
+
+      })
+    });
+  </script>
+</html>

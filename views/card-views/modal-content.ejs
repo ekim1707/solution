@@ -1,0 +1,35 @@
+<div class="modal-content hidden">
+    <div class="modal-gallery">
+        <% card.gallery.forEach((image) => { %>
+            <img class="gallery-image" src="../../images/first/<%= image %>" />
+        <% }); %>
+    </div>
+    <div class="modal-details">
+        <div class="modal-details-header">All the details...</div>
+        <div class="modal-details-top">
+            <%= card.details %>
+        </div>
+        <div class="modal-details-bottom">
+            <div class="modal-details-cols">
+                <div class="modal-col-headers">The Need...</div>
+                <div class="modal-col-purpose"><%= card.purpose %></div>  
+            </div>
+            <div class="modal-details-cols">
+                <div class="modal-col-headers">So far we have...</div>
+                <ul class="modal-col-list">
+                    <% card.progress.forEach((update) => { %>
+                        <li class="modal-col-update"><%= update %></li>
+                    <% }) %>
+                </ul>  
+            </div>
+            <div class="modal-details-cols">
+                <div class="modal-col-headers">We could use...</div>
+                <ul class="modal-col-list">
+                    <% card.needs.forEach((need) => { %>
+                        <li class="modal-col-need"><%= need %></li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

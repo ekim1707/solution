@@ -1,0 +1,44 @@
+<div class="category-rows">
+    <div class="card-row-title">Popular</div>
+    <div class="card-rows">
+      <% data.forEach(({ title, cards }) => { %>
+        <div class="card-cols">
+          <% cards.forEach((card) => { %>
+            <div class="card-holder">
+              <div class="card">
+                <div class="card-front" style="background-image: url('../images/first/<%= card.background %>');">
+                  <div class="card-category"><span>CATEGORY:</span> <%= card.category %></div>
+                </div>
+                <div class="card-back">
+                  <div class="card-category"><span>CATEGORY:</span> <%= card.category %></div>
+                  <div class="card-back-rows">
+                    <div class="title-divs">The Need...</div>
+                    <div class="card-purpose"><%= card.purpose %></div>  
+                  </div>
+                  <hr>
+                  <div class="card-back-rows">
+                    <div class="title-divs">So far we have...</div>
+                    <ul class="card-progress-container">
+                      <% card.progress.forEach((update) => { %>
+                        <li class="card-progress-update"><%= update %></li>
+                      <% }) %>
+                    </ul>  
+                  </div>
+                  <hr>
+                  <div class="card-back-rows">
+                    <div class="title-divs">We could use...</div>
+                    <ul class="card-needs-container">
+                      <% card.needs.forEach((need) => { %>
+                        <li class="card-need"><%= need %></li>
+                      <% }) %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% include description-box %>
+          <% }) %>
+        </div>
+      <% }) %>
+    </div>
+  </div>

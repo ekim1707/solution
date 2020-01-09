@@ -1,0 +1,29 @@
+<div class="card-description">
+    <div class="modal-button hidden">CLOSE</div>
+    <div class="card-name"><%= card.name %></div>
+    <% include modal-content %>
+    <div class="card-body">
+      <div class="body-col-left">
+        <div class="card-organizer">by <%= card.organizer %></div>
+        <div class="card-location"><%= card.location %></div>
+      </div>
+      <div class="body-col-center">
+        <div class="card-start-date"><span>Started:</span> <%= card.started %></div>
+        <div class="body-col-row">
+          <div class="card-involved"><span>Involved:</span> <%= card.involved %></div>
+          &nbsp;|&nbsp;
+          <div class="card-liked"><span>Liked:</span> <%= card.liked %></div>
+        </div>
+      </div>
+      <div class="body-col-right">
+          <div class="body-col-row">
+              <i class="material-icons card-icons" id="add">add</i>
+              <a href="mailto:<%= card.email %>" target="_blank"><i class="material-icons card-icons" id="contact">contact_mail</i></a>
+          </div>
+          <div class="body-col-row">
+              <i class="material-icons card-icons" id="like">thumb_up</i>
+              <i class="material-icons card-icons" id="favorite">favorite_border</i>
+          </div>
+      </div>
+    </div>
+  </div>

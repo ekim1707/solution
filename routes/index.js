@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
-const data = require('../data');
+const db = require('../db');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', async (req, res) => {
+  const data = await db.any(`select * from projects`);
+  
   res.render('index', { 
     data: data 
   });

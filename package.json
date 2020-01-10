@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "PORT=3003 node ./bin/www"
+    "start": "PORT=3003 node ./bin/www",
+    "db:reset": "dropdb solution; bash create-db.sh"
   },
   "dependencies": {
     "bcrypt": "^3.0.7",

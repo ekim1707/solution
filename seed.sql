@@ -1,21 +1,46 @@
+insert into users
+    (first_name, last_name, email)
+values
+    ('John', 'Smith', 'jsmith@someemail.com');
 
+insert into projects
+    (
+        picture,
+        title,
+        date_posted,
+        purpose,
+        details,
+        liked,
+        involved,
+        users_id
+    )
+values
+    (
+        'house.jpg', 
+        'Find a House for Dan!', 
+        '01/07/20', 
+        'I would love to find a house for a homeless person I met near the Kroger in Suwanee if possible. He was a retired veteran with no other family and means of sustaining himself. I know it would take a lot, but if we teamed up together, it would be a great thing to be able to do for a really nice guy who is down on his luck.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lorem odio, a viverra lectus mattis vitae. Proin sed nunc ipsum. Nulla facilisi. Nunc molestie pharetra faucibus. Quisque lacinia venenatis leo sit amet volutpat. Vivamus semper dolor eget mi varius, eget gravida sem tincidunt. Fusce at ante suscipit velit posuere efficitur eget sit amet magna.',
+        12,
+        3,
+        1
+    );
 
--- insert into company
---     (company_name)
--- VALUES
---     ('Google'),
---     ('Apple'),
---     ('Microsoft');
+insert into progress
+    (note, projects_id)
+values
+    ('Found someone who can provide home-cooked meals once a week', 1),
+    ('Located a few possible places of employment', 1),
+    ('Raised about 3/4 of the capital needed to start looking for a cheap house', 1);
 
--- INSERT INTO employees
---     (first_name, last_name, email, password, user_role, emp_status, company_id)
--- VALUES
---     ('Eugene', 'Kim', 'ekim@google.com', 'pass123', True, True, 1),
---     ('Tracy', 'N', 'tracy@apple.com', 'pass123', True, True, 2),
---     ('Jonathan', 'A', 'jonathan@microsoft.com', 'pass123', True, True, 3),
---     ('Jane', 'Doe-google', 'janedoe@google.com', 'pass123', False, True, 1),
---     ('John', 'Doe-google', 'johndoen@google.com', 'pass123', False, True, 1),
---     ('John', 'Doe-apple', 'johndoe@apple.com', 'pass123', False, True, 2),
---     ('Jane', 'Doe-apple', 'janedoe@apple.com', 'pass123', False, True, 2),
---     ('Steve', 'Doe-microsoft', 'stevedoe@microsoft.com', 'pass123', False, True, 3),
---     ('Stephanie', 'Doe-microsoft', 'stephdoe@microsoft.com', 'pass123', False, True, 3);
+insert into needs
+    (note, projects_id)
+values
+    ('Real-estate', 1),
+    ('Knowledge of legal system', 1),
+    ('Someone else who can help cook meals', 1);
+
+insert into gallery
+    (picture, projects_id)
+values
+    ('gallery1.png', 1);

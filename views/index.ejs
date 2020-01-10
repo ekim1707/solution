@@ -30,15 +30,15 @@
         }
 
         if ($el.hasClass('card-description') && (!$el.hasClass('body-col-right') && !$el.parents().hasClass('body-col-right'))) {
-          $el.addClass('modal').children('.modal-button, .modal-content').removeClass('hidden');
+          $el.addClass('modal').find('.modal-button, .modal-content').removeClass('hidden');
           $('.card-icons').addClass('grow-icons');
         } else if ($el.parents().hasClass('card-description') && (!$el.hasClass('body-col-right') && !$el.parents().hasClass('body-col-right'))) {
-          $el.parents('.card-description').addClass('modal').children('.modal-button, .modal-content').removeClass('hidden');
+          $el.parents('.card-description').addClass('modal').find('.modal-button, .modal-content').removeClass('hidden');
           $('.card-icons').addClass('grow-icons');
         }
 
         if ($el.hasClass('modal-button')) {
-          $el.parents('.card-description').removeClass('modal').children('.modal-button, .modal-content').addClass('hidden');
+          $el.parents('.card-description').removeClass('modal').find('.modal-button, .modal-content').addClass('hidden');
           $('.card-icons').removeClass('grow-icons');
         }
 

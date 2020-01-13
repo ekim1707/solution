@@ -1,26 +1,27 @@
 <div class="category-rows">
     <div class="card-row-title">Popular</div>
     <div class="card-rows">
-      <% data.forEach(({ title, cards }) => { %>
+      <% projectData.forEach((project) => { %>
         <div class="card-cols">
-          <% cards.forEach((card) => { %>
             <div class="card-holder">
               <div class="card">
-                <div class="card-front" style="background-image: url('../images/first/<%= card.background %>');">
-                  <div class="card-category"><span>CATEGORY:</span> <%= card.category %></div>
+                <div class="card-front" style="background-image: url('../images/first/<%= project.picture %>');">
+                  <div class="card-category"><span>CATEGORY:</span> <%= project.category %></div>
                 </div>
                 <div class="card-back">
-                  <div class="card-category"><span>CATEGORY:</span> <%= card.category %></div>
+                  <div class="card-category"><span>CATEGORY:</span> <%= project.category %></div>
                   <div class="card-back-rows">
                     <div class="title-divs">The Need...</div>
-                    <div class="card-purpose"><%= card.purpose %></div>  
+                    <div class="card-purpose"><%= project.purpose %></div>  
                   </div>
                   <hr>
                   <div class="card-back-rows">
                     <div class="title-divs">So far we have...</div>
                     <ul class="card-progress-container">
-                      <% card.progress.forEach((update) => { %>
-                        <li class="card-progress-update"><%= update %></li>
+                      <% progressData.forEach((update) => { %>
+                        <% if (update.projects_id === project.id) { %>
+                          <li class="card-progress-update"><%= update.note %></li>
+                        <% } %>
                       <% }) %>
                     </ul>  
                   </div>
@@ -28,8 +29,10 @@
                   <div class="card-back-rows">
                     <div class="title-divs">We could use...</div>
                     <ul class="card-needs-container">
-                      <% card.needs.forEach((need) => { %>
-                        <li class="card-need"><%= need %></li>
+                      <% needsData.forEach((need) => { %>
+                        <% if (need.projects_id === project.id) { %>
+                          <li class="card-need"><%= need.note %></li>
+                        <% } %>
                       <% }) %>
                     </ul>
                   </div>
@@ -37,7 +40,6 @@
               </div>
             </div>
             <% include description-box %>
-          <% }) %>
         </div>
       <% }) %>
     </div>

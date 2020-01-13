@@ -1,24 +1,32 @@
 <div class="card-description">
     <div class="modal-button hidden">CLOSE</div>
-    <div class="card-name"><%= card.name %></div>
+    <div class="card-name"><%= project.title %></div>
     <% include modal-content %>
     <div class="card-body">
       <div class="body-col-left">
-        <div class="card-organizer">by <%= card.organizer %></div>
-        <div class="card-location"><%= card.location %></div>
+        <% userData.forEach((user) => { %>
+          <% if (project.users_id === user.id) { %>          
+            <div class="card-organizer">by <%= user.first_name %>&nbsp;<%= user.last_name %></div>
+          <% } %>
+        <% }); %>
+        <div class="card-location"><%= project.place %></div>
       </div>
       <div class="body-col-center">
-        <div class="card-start-date"><span>Started:</span> <%= card.started %></div>
+        <div class="card-start-date"><span>Started:</span> <%= project.date_posted %></div>
         <div class="body-col-row">
-          <div class="card-involved"><span>Involved:</span> <%= card.involved %></div>
+          <div class="card-liked"><span>Liked:</span> <%= project.liked %></div>
           &nbsp;|&nbsp;
-          <div class="card-liked"><span>Liked:</span> <%= card.liked %></div>
+          <div class="card-involved"><span>Involved:</span> <%= project.involved %></div>
         </div>
       </div>
       <div class="body-col-right">
           <div class="body-col-row">
               <i class="material-icons card-icons" id="add">add</i>
-              <a href="mailto:<%= card.email %>" target="_blank"><i class="material-icons card-icons" id="contact">contact_mail</i></a>
+              <% userData.forEach((user) => { %>
+                <% if (project.users_id === user.id) { %>
+                  <a href="mailto:<%= user.email %>" target="_blank"><i class="material-icons card-icons" id="contact">contact_mail</i></a>
+                <% } %>
+              <% }); %>
           </div>
           <div class="body-col-row">
               <i class="material-icons card-icons" id="like">thumb_up</i>

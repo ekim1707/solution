@@ -5,9 +5,11 @@ values
 
 insert into projects
     (
+        category,
         picture,
         title,
         date_posted,
+        place,
         purpose,
         details,
         liked,
@@ -16,9 +18,11 @@ insert into projects
     )
 values
     (
+        'Homeless',
         'house.jpg', 
         'Find a House for Dan!', 
         '01/07/20', 
+        'Suwanee, GA',
         'I would love to find a house for a homeless person I met near the Kroger in Suwanee if possible. He was a retired veteran with no other family and means of sustaining himself. I know it would take a lot, but if we teamed up together, it would be a great thing to be able to do for a really nice guy who is down on his luck.',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lorem odio, a viverra lectus mattis vitae. Proin sed nunc ipsum. Nulla facilisi. Nunc molestie pharetra faucibus. Quisque lacinia venenatis leo sit amet volutpat. Vivamus semper dolor eget mi varius, eget gravida sem tincidunt. Fusce at ante suscipit velit posuere efficitur eget sit amet magna.',
         12,

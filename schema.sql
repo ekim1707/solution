@@ -13,9 +13,11 @@ create table users (
 
 create table projects (
    id serial primary key not null,
+   category text not null,
    picture text,
    title text not null,
    date_posted date not null,
+   place text not null,
    purpose text not null,
    details text not null,
    liked integer,

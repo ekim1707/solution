@@ -2,8 +2,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark-blue-lighter: #2f486e;
+  --dark-blue: #233752;
+  --orange: #f37022;
+  --lightgray: #e6e7eb;
+}
+
 a {
-  color: white;
+  color: var(--dark-blue);
 }
 
 body {
@@ -20,8 +27,8 @@ nav {
   height: 100px;
   left: 0;
   top: 0;
-  color: white;
-  background: #337ab7;
+  color: var(--dark-blue);
+  background: var(--lightgray);
 }
 .navlogo {
   width: 20%;
@@ -39,8 +46,8 @@ nav {
 }
 .navlogo > a:hover {
   cursor: pointer;
-  background: white;
-  color: #337ab7;
+  color: var(--lightgray);
+  background: var(--dark-blue);
   transition: color 1s, background 1s;
 }
 nav > ul {
@@ -66,8 +73,8 @@ nav > ul > li > a {
 }
 nav > ul > li > a:hover {
   cursor: pointer;
-  background: white;
-  color: #337ab7;
+  color: var(--lightgray);
+  background: var(--dark-blue);
   transition: color 1s, background 1s;
 }
 .profile-menu {

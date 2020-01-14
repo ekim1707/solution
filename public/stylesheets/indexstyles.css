@@ -2,7 +2,7 @@
 
 .category-rows {
     padding: 20px 0;
-    background: rgba(255, 165, 0, .7);
+    background: rgb(35, 55, 82, .7);
 }
 .card-row-title {
     margin: 0 20px;
@@ -25,6 +25,7 @@
     height: 400px;
     margin: 25px 0;
     background: white;
+    border-radius: 5px;
     -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transform-style: preserve-3d;
@@ -47,6 +48,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 5px;
     backface-visibility: hidden;
 }
 
@@ -55,7 +57,7 @@
 }
 .card-category {
     padding: 5px;
-    color: gold;
+    color: var(--dark-blue);
     background: rgba(175, 174, 174, .8);
     font-size: 18px;
     font-weight: bolder;
@@ -80,7 +82,7 @@
 }
 .card-name {
     padding: 5px;
-    color: gold;
+    color: var(--dark-blue);
     font-size: 18px;
 }
 .card-body {
@@ -105,7 +107,7 @@
     display: flex;
 }
 .card-involved, .card-liked {
-    color: gold;
+    color: var(--dark-blue);
     font-weight: bolder;
 }
 .card-involved > span, .card-liked > span {
@@ -119,11 +121,14 @@
 .body-col-row > .material-icons:hover {
     cursor: pointer;
 }
+#contact {
+    color: white;
+}
 
 .card-back {
     position: relative;
-    color: white;
-    background: #337ab7;
+    color: black;
+    background: white;
     transform: rotateY(180deg);
 }
 .card-back > .card-category {
@@ -138,7 +143,7 @@
 }
 .title-divs {
     margin: 3px 0;
-    color: gold;
+    color: black;
     font-weight: bolder;
 }
 .card-back-rows > ul {
@@ -150,7 +155,7 @@
 }
 hr {
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 .modal {

@@ -21,7 +21,8 @@
     align-items: center;
     margin: 45px 0;
     padding: 60px;
-    background: rgba(255, 255, 255, .85);
+    color: var(--dark-blue);
+    background: rgba(230, 231, 235, .8);
     border-radius: 5px;
 }
 .about-header {

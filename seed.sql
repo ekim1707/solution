@@ -88,15 +88,18 @@ values
     ('Found someone who can provide home-cooked meals once a week', 1),
     ('Located a few possible places of employment', 1),
     ('Raised about 3/4 of the capital needed to start looking for a cheap house', 1),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4);
+    ('2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
+    ('2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
+    ('2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
+    ('3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
+    ('3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
+    ('3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
+    ('4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
+    ('4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
+    ('4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
+    ('5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 5),
+    ('5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 5),
+    ('5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 5);
 
 insert into needs
     (note, projects_id)
@@ -104,15 +107,18 @@ values
     ('Real-estate', 1),
     ('Knowledge of legal system', 1),
     ('Someone else who can help cook meals', 1),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
-    ('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4);
+    ('2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
+    ('2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
+    ('2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 2),
+    ('3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
+    ('3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
+    ('3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3),
+    ('4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
+    ('4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
+    ('4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 4),
+    ('5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 5),
+    ('5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 5),
+    ('5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 5);
 
 insert into gallery
     (picture, projects_id)
@@ -132,4 +138,8 @@ values
     ('gallery1.png', 4),
     ('volunteer.png', 4),
     ('gallery1.png', 4),
-    ('volunteer.png', 4);
+    ('volunteer.png', 4),
+    ('gallery1.png', 5),
+    ('volunteer.png', 5),
+    ('gallery1.png', 5),
+    ('volunteer.png', 5);

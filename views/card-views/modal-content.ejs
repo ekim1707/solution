@@ -1,8 +1,23 @@
 <div class="modal-content hidden">
     <div class="modal-gallery">
-        <% galleryData.forEach((image) => { %>
-            <img class="gallery-image" src="../../images/cards/<%= image.picture %>" />
-        <% }); %>
+        <img src="../../images/cards/arrowleft.png" alt="" class="image-toggle image-toggle-left hoverable hidden">
+        <img src="../../images/cards/arrowright.png" alt="" class="image-toggle image-toggle-right hoverable">
+        <% let idLast = galleryData.length - 1; %>
+        <% galleryData.forEach((image, i) => {
+            if (image.projects_id === project.id) {
+                switch(i) {
+                    case 0: %>
+                        <img class="gallery-image" src="../../images/cards/<%= image.picture %>" id="gallery-image-first" />
+                    <% break;
+                    case idLast: %>
+                        <img class="gallery-image" src="../../images/cards/<%= image.picture %>" id="gallery-image-last" />
+                    <% break;
+                    default: %>
+                        <img class="gallery-image" src="../../images/cards/<%= image.picture %>" />
+                    <% break;
+                }
+            };
+        }); %>
     </div>
     <div class="modal-details">
         <div class="modal-details-header">All the details...</div>

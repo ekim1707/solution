@@ -7,6 +7,9 @@ This site is currently still under production. It will most likely be available 
 
 ![](./public/images/readme/solution.gif)
 
+* Updated:
+[YouTube link](https://youtu.be/Uj3VATh07vY)
+
 ## Description
 
 This website was inspired by the music of Joel Houston. 

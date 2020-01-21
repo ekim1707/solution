@@ -28,7 +28,7 @@ nav {
   left: 0;
   top: 0;
   color: var(--dark-blue);
-  background: var(--lightgray);
+  background: white;
 }
 .navlogo {
   width: 20%;

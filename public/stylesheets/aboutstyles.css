@@ -22,7 +22,7 @@
     margin: 45px 0;
     padding: 60px;
     color: var(--dark-blue);
-    background: rgba(230, 231, 235, .8);
+    background: rgba(255, 255, 255, .9);
     border-radius: 5px;
 }
 .about-header {

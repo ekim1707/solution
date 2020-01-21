@@ -1,11 +1,13 @@
 @import "./commonstyles.css";
 
 .category-rows {
-    padding: 20px 0;
+    width: 100%;
+    padding: 20px 0 0 30px;
     background: rgb(35, 55, 82, .7);
+    overflow-x: scroll;
 }
 .card-row-title {
-    margin: 0 20px;
+    position: fixed;
     color: white;
     font-size: 18px;
     font-weight: bolder;
@@ -14,7 +16,7 @@
     display: flex;
 }
 .card-cols {
-    margin: 0 20px;
+    margin-bottom: 20px;
 }
 .card-holder {
     perspective: 2000px;
@@ -23,7 +25,7 @@
     background: transparent;
     width: 400px;
     height: 400px;
-    margin: 25px 0;
+    margin: 45px 30px 25px 0;
     background: white;
     border-radius: 5px;
     -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -72,6 +74,7 @@
     display: flex;
     flex-flow: column nowrap;
     width: 400px;
+    min-height: 110px;
     color: white;
     background: rgb(175, 174, 174);
     font-size: 14px;
@@ -140,17 +143,21 @@
 }
 .card-back-rows {
     height: 33.3%;
+    overflow: scroll;
 }
 .title-divs {
-    margin: 3px 0;
+    position: fixed;
+    padding: 3px 0;
+    background: white;
     color: black;
     font-weight: bolder;
 }
 .card-back-rows > ul {
-    margin: 0;
+    margin: 25px 0 0 0;
     padding-left: 20px;
 }
 .card-purpose {
+    margin-top: 25px;
     overflow: scroll;
 }
 hr {
@@ -209,11 +216,12 @@ hr {
 }
 .modal-gallery {
     width: 45%;
+    height: 100%;
+    overflow: hidden;
 }
 .gallery-image {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
 }
 .modal-details {
     width: 45%;

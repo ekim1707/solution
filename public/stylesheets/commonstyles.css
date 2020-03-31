@@ -7,6 +7,7 @@
   --dark-blue: #233752;
   --orange: #f37022;
   --lightgray: #e6e7eb;
+  --shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 a {
@@ -29,6 +30,7 @@ nav {
   top: 0;
   color: var(--dark-blue);
   background: white;
+  box-shadow: var(--shadow);
 }
 .navlogo {
   width: 20%;

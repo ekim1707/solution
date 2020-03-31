@@ -8,7 +8,6 @@
     background: transparent;
 }
 .about-container-background-image {
-    position: absolute;
     width: 100%;
     height: auto;
     opacity: .5;
@@ -19,11 +18,12 @@
     position: fixed;
     flex-flow: column nowrap;
     align-items: center;
-    margin: 45px 0;
+    margin: 110px 0;
     padding: 60px;
     color: var(--dark-blue);
     background: rgba(255, 255, 255, .9);
     border-radius: 5px;
+    box-shadow: var(--shadow);
 }
 .about-header {
     margin-top: 0;

@@ -1,10 +1,36 @@
 @import "./commonstyles.css";
 
 .category-rows {
+    position: relative;
     width: 100%;
     padding: 20px 0 0 30px;
     background: rgb(35, 55, 82, .7);
     overflow-x: scroll;
+}
+.card-row-toggle-left {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    left: 20px;
+    top: calc(50% - 70px);
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1000;
+}
+.card-row-toggle-right {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    top: calc(50% - 70px);
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1000;
+}
+.card-row-toggle-left:hover, .card-row-toggle-right:hover {
+    cursor: pointer;
 }
 .card-row-title {
     position: fixed;
@@ -79,6 +105,7 @@
     background: rgb(175, 174, 174);
     font-size: 14px;
     border-radius: 5px;
+    box-shadow: var(--shadow);
 }
 .card-description:hover {
     cursor: pointer;
